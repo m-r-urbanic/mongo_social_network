@@ -3,7 +3,7 @@ const { Friend, User } = require('../models');
 module.exports = {
   async getFriends(req, res) {
         try {
-            const friends = await User.find();
+            const friends = await Friend.find();
             res.json(friends);
         } catch (err) {
             res.status(500).json(err);
