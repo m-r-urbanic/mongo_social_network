@@ -8,7 +8,11 @@ const thoughtsSchema = new Schema(
                 ref: 'users',
             }
         ],
-        thought: text,
+        thought: {
+            type: String,
+            minLength: 1,
+            maxLength: 500,
+        },
     },
     {
         toJSON: {
